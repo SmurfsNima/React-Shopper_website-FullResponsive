@@ -44,13 +44,13 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="flex items-center justify-center mr-10">
-       
+       <Link to={'/login'}>
         <button className="outline-none rounded-xl border-2	border-slate-300 bg-white  text-lg cursor-pointer font-semibold py-1 px-7 mr-6  hover:bg-slate-100 ">
      
           Login
           
         </button>
-       
+        </Link>
 
         <img className="cursor-pointer" src={cart_icon} alt="" />
         <div className="w-[22px] h-[22px] cursor-pointer flex justify-center items-center text-[14px] rounded-lg bg-red-500 text-white mt-[-20px] ml-[-15px]">
