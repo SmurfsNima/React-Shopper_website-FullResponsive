@@ -2,11 +2,11 @@ import Logo from "../../Assets/Assets/logo.png";
 import cart_icon from "../../Assets/Assets/cart_icon.png";
 import { useState } from "react";
 import "./navbar.css";
-import { Outlet, Link } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [menu, setMneu] = useState("shop");
   return (
+   
     <nav className=" w-full flex justify-between items-center bg-white text-black p-[16px] shadow-md ">
       <div className="flex items-center justify-center mx-7 cursor-pointer" >
         <img className="w-[40px]" src={Logo} alt="" />
@@ -17,26 +17,30 @@ const Navbar = () => {
           onClick={() => setMneu("shop")}
           className={menu === "shop" ? "border-b-2 border-red-400 pb-1" : ""}
         >
-             shop
+          <Link to={"/cart"} > shop</Link>
+            
         </li>
 
         <li
           onClick={() => setMneu("men")}
           className={menu === "men" ? "border-b-2 border-red-400 pb-1" : ""}
         >
-          men
+          <Link to={"/men"} > men</Link>
+         
         </li>
         <li
           onClick={() => setMneu("women")}
           className={menu === "women" ? "border-b-2 border-red-400 pb-1" : ""}
         >
-          women
+          <Link to={"/women"} >women</Link>
+          
         </li>
         <li
           onClick={() => setMneu("kids")}
           className={menu === "kids" ? "border-b-2 border-red-400 pb-1" : ""}
         >
-          kids
+          <Link to='/kids' > kids</Link>
+         
         </li>
       </ul>
       <div className="flex items-center justify-center mr-10">
@@ -53,7 +57,7 @@ const Navbar = () => {
           1
         </div>
       </div>
-      <Outlet />
+   
     </nav>
   );
 };
