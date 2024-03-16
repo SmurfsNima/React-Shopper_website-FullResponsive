@@ -21,7 +21,7 @@ function App() {
           <Route path="/men" element = {<Shopcategory banner={men_banner} category = 'men'/>} />
           <Route path="/women" element = {<Shopcategory  banner={women_banner} category = 'women'/>} />
           <Route path="/kids" element = {<Shopcategory banner={kids_banner} category = 'kid' />} />
-          {/* <Route path="/product" element={<Product/>} /> */}
+          <Route path="/product" element={<Product/>} />
           <Route path="/product/:productId" element ={<Product/>} />
         </Routes>
       </BrowserRouter>
