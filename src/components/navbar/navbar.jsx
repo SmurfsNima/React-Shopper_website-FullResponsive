@@ -17,7 +17,7 @@ const Navbar = () => {
           onClick={() => setMneu("shop")}
           className={menu === "shop" ? "border-b-2 border-red-400 pb-1" : ""}
         >
-          <Link to={"/cart"} > shop</Link>
+          <Link to={"/"} > shop</Link>
             
         </li>
 

@@ -5,10 +5,10 @@ import Item from "../Item/Item";
 import all_product from '../../Assets/Assets/all_product';
 const Shopcategory = (props) => {
  
-  console.log(all_product);
+
   // console.log(props);
   // 
-  console.log(ShopContext);
+
   const filteredProducts = all_product.filter((product) => product.category === props.category);
   return (
     <div >
