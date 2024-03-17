@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import star from "../../Assets/Assets/star_icon.png";
 import star_dull from "../../Assets/Assets/star_dull_icon.png";
 import './ProductDisplay.css'
+import { ShopContext } from "../context/Context";
 const ProductDisplay = ({ product }) => {
+  const {AddtoCart} = useContext(ShopContext)
   return (
     <div className="flex my-0 mx-170px">
       <div className="flex gap-5 basis-[46%]">
@@ -41,7 +43,7 @@ const ProductDisplay = ({ product }) => {
           <div>XL</div>
           <div>XXL</div>
         </div>
-        <button className="bg-red-500 text-white w-[200px] font-semibold text-sm py-3 mb-6 cursor-pointer border-none outline-none">ADD TO CART</button>
+        <button onClick={()=>AddtoCart(product.id)} className="bg-red-500 text-white w-[200px] font-semibold text-sm py-3 mb-6 cursor-pointer border-none outline-none">ADD TO CART</button>
         <p><span className="font-semibold">CATEGORY:</span> <span>{product.name}</span></p>
         <p><span className="font-semibold">Tags :</span> <span>Modern,Latest</span></p>
       </div>

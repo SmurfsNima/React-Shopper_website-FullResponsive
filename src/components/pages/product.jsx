@@ -7,7 +7,7 @@ import Related from "../RelatedProducts/Related";
 const Product = () => {
     const {productId} = useParams()
     const product = all_product.find((e)=>  e.id === Number(productId));
-    console.log(product);
+
     return ( <div className=" pl-[5%]">
         <BreadCrum product={product} />
         <ProductDisplay product ={product} />

@@ -9,6 +9,7 @@ import Shopcategory from "./components/pages/Shopcategory";
 import men_banner from './Assets/Assets/banner_mens.png'
 import women_banner from './Assets/Assets/banner_women.png'
 import kids_banner from './Assets/Assets/banner_kids.png'
+import Cart from "./components/pages/Cart";
 function App() {
   return (
     <div className="App px[10%]">
@@ -23,6 +24,7 @@ function App() {
           <Route path="/kids" element = {<Shopcategory banner={kids_banner} category = 'kid' />} />
           {/* <Route path="/product" element={<Product/>} /> */}
           <Route path="/product/:productId" element ={<Product/>} />
+          <Route path="/cart" element = {<Cart />} />
         </Routes>
       </BrowserRouter>
       <Footer />
