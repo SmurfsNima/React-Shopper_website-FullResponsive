@@ -9,8 +9,8 @@ const CartItem = () => {
     
 
   return (
-    <div className="my-[100px] mx-[170px]">
-      <div className="format-main">
+    <div className="m-[100px] xs:m-[20px] ">
+      <div className="format-main ">
         <p>Products</p>
         <p>Title</p>
         <p>Price</p>
@@ -23,16 +23,16 @@ const CartItem = () => {
         if (cartItems[e.id] > 0) {
           return (
             <div>
-              <div className="format-main  ">
-                <img className=" h-[100px] " src={e.image} alt="" />
+              <div className="carts-item-format  ">
+                <img id="product-img" className=" h-[100px]  " src={e.image} alt="" />
                 <p>{e.name}</p>
                 <p>${e.new_price}</p>
-                <button className="w-[60px] h-[45px] border-2 border-[#ebebeb] bg-white">
+                <button className="w-[60px] h-[45px] border-2 border-[#ebebeb] bg-white ">
                   {cartItems[e.id]}
                 </button>
                 <p>${e.new_price * cartItems[e.id]}</p>
-                <img
-                  className="w-4 mx-10 cursor-pointer hover:opacity-80"
+                <img id="remove-icon"
+                  className="w-4 mx-10 cursor-pointer hover:opacity-80 "
                   onClick={() => RemovefromCart(e.id)}
                   src={remove_icon}
                   alt=""
@@ -44,8 +44,8 @@ const CartItem = () => {
         }
         return null;
       })}
-      <div className="flex my-[100px]">
-        <div className="flex-1 flex flex-col mr-[200px] gap-10  ">
+      <div id="cart-fee" className="flex my-[100px]  ">
+        <div className="flex-1 flex flex-col mr-[200px] gap-10 xs:mr-0">
           <h2 className="font-bold text-2xl">cart Total</h2>
           <div className="flex flex-col gap-10">
             <div className="cartsitems-total-item">
@@ -60,22 +60,22 @@ const CartItem = () => {
             <hr className="h-1 w-full" />
             <div className="cartsitems-total-item">
               <p>Total</p>
-              <p>${getTotalAmount()}</p>
+              <p className="font-bold text-2xl"> ${getTotalAmount()}</p>
             </div>
           </div>
-          <button className="w-[262px] h-[58px] outline-none border-none bg-[#ff5a5a] text-white font-semibold text-lg cursor-pointer">
+          <button className="w-[262px] h-[58px] outline-none border-none bg-[#ff5a5a] text-white font-semibold text-lg cursor-pointer lg:max-w-[200px] lg:h-[45px] lg:text-[14px] xs:w-[150px] xs:h-[40px]  xs:text-[10px]">
             PROCEED TO CHECKOUT
           </button>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1 lg:w-auto lg:max-w-[500px] xs:flex-col ">
           <p className="text-[#555]">if you have a promo code, Enter it here</p>
-          <div className="w-[500px] mt-[15px] pl-5 h-[45px] bg-[#eaeaea]">
+          <div className="w-[500px] mt-[15px] h-[45px] pl-5 bg-[#eaeaea] xs:w-full ">
             <input
-              className="border-none outline-none bg-transparent w-[330px] h-[50px] "
+              className="border-none outline-none bg-transparent w-[330px] h-[50px] xs:w-full  "
               type="text"
               placeholder="promo code"
             />
-            <button className="bg-black text-white h-full float-right px-10 cursor-pointer">
+            <button className="bg-black text-white h-full float-right px-10 cursor-pointer lg:w-[120px] lg:mt-[-50px] xs:mt-[-50px]  ">
               Submit
             </button>
           </div>

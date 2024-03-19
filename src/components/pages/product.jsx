@@ -8,7 +8,7 @@ const Product = () => {
     const {productId} = useParams()
     const product = all_product.find((e)=>  e.id === Number(productId));
 
-    return ( <div className=" pl-[5%]">
+    return ( <div >
         <BreadCrum product={product} />
         <ProductDisplay product ={product} />
         <Description />

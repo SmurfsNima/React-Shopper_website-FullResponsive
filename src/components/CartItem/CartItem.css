@@ -13,3 +13,41 @@
     justify-content: space-between;
     padding: 15px 0px;
 }
+@media (max-width:1280px) {
+    .format-main{
+        display: grid;
+        grid-template-columns: .5fr 3fr .5fr .5fr .5fr .5fr;
+font-size: 15px;
+        gap: 20px;
+        padding: 15px 0px;
+    }
+    .format-main #product-img{
+        height: 60px;
+    }
+    #remove-icon{
+        margin: auto;
+    }
+    .format-main button{
+        width: 40px;
+        height: 30px;
+        
+    }
+    #cart-fee{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    
+}
+@media (max-width:500px){
+.format-main{
+    display: none;
+   
+
+}
+.carts-item-format {
+    display: grid;
+    grid-template-columns: .5fr 3fr .5fr;
+    gap: 10px;
+}
+}

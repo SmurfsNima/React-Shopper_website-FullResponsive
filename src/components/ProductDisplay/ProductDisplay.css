@@ -9,3 +9,47 @@
     height: 125px;
     width: 170px;
 }
+@media (max-width:1280px) {
+    #img-container img{
+        height: 110px;
+    }
+    #size-container div{
+       
+        padding: 14px 20px;
+     
+}
+}
+@media (max-width:1280px) {
+    #img-container img{
+        height: 75px;
+        width: 80px;
+    }
+    #stars img{
+        width: 15px;
+    }
+    #size-container div{
+       
+        padding: 10px 16px;
+        font-size: 12px;
+}
+}
+@media (max-width:800px) {
+    #img-container img{
+        height: 70px;
+    }
+    #size-container div{
+       
+        padding: 4px 11px;
+        font-size: 10px;
+    }
+}
+@media (max-width:800px) {
+    #img-container img{
+        height: 76px;
+    }
+    #size-container div{
+       
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
